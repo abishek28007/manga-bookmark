@@ -1,5 +1,7 @@
 
 import { BlitzPage } from "blitz"
+import { Suspense } from "react"
+
 import Layout from "app/core/layouts/Layout"
 import MangaContainer from "app/mangas/components/MangaContainer"
 
@@ -13,7 +15,9 @@ const Home: BlitzPage = () => {
   return (
     <div className="container">
       <main>
-        <MangaContainer />
+        <Suspense fallback="Loading...">
+          <MangaContainer />
+        </Suspense>
       </main>
 
       <style jsx global>{`
@@ -32,14 +36,7 @@ const Home: BlitzPage = () => {
           -moz-osx-font-smoothing: grayscale;
           box-sizing: border-box;
         }
-        .container {
-          min-height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-      `}</style>
+        `}</style>
     </div>
   )
 }

@@ -48,7 +48,7 @@ const UserInfo = () => {
 const Header = () => {
   return (
     <>
-      <div className="mb-8 w-14 h-52 flex">
+      <div className="mb-8 w-14 flex">
         <Image src={logo} alt="Manga" />
         <Suspense fallback="Loading...">
           <UserInfo />

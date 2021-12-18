@@ -63,3 +63,13 @@ model Token {
 // enum TokenType {
 //   RESET_PASSWORD
 // }
+
+model Bookmarks {
+  id          Int      @id @default(autoincrement())
+  url         String
+  description String
+  name        String
+  image       String
+  is_reading  Boolean
+  genre       String
+}
