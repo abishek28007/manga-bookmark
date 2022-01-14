@@ -3,7 +3,6 @@ import { useRecoilValue } from 'recoil';
 
 // import Rating from '../Rating';
 import { quotesListState, QuoteList, Quote } from '../../store/atoms';
-import './style.scss';
 
 const url = 'https://programming-quotes-api.herokuapp.com/Quotes/'
 

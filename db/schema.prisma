@@ -2,7 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgres"
   url      = env("DATABASE_URL")
 }
 
@@ -65,10 +65,10 @@ model Token {
 // }
 
 model Bookmarks {
-  id          Int      @id @default(autoincrement())
-  url         String
+  id          Int     @id @default(autoincrement())
+  url         String  @unique
   description String
-  name        String
+  name        String  @unique
   image       String
   is_reading  Boolean
   genre       String
